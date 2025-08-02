@@ -1,0 +1,21 @@
+﻿# Node / Next
+node_modules/
+.npm/
+.next/
+out/
+dist/
+
+# Capacitor / Android
+android/.gradle/
+android/.gradle-home/
+android/app/build/
+android/build/
+android/local.properties
+
+# IDE
+.vscode/
+.idea/
+
+# Logs / SO
+*.log
+.DS_Store

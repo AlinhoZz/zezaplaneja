@@ -1,0 +1,41 @@
+{
+  "name": "Zeza Planeja",
+  "short_name": "Zeza Planeja",
+  "description": "Seu aplicativo mobile para planejamento de atividades diárias e semanais com notificações e metas.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["productivity", "lifestyle"],
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "shortcuts": [
+    {
+      "name": "Nova Atividade",
+      "short_name": "Nova",
+      "description": "Criar uma nova atividade",
+      "url": "/?action=new",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
