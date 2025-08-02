@@ -12,10 +12,10 @@ import { Badge } from "@/components/ui/badge";
 import { Bell, BellOff, Smartphone, Settings, CheckCircle } from "lucide-react";
 
 /**
- * Observações importantes (Android/Capacitor):
- * - smallIcon DEVE ser um recurso nativo. Use "ic_launcher" (padrão do app) ou um ic_stat_* que você gerar.
+ * Observações (Android/Capacitor):
+ * - smallIcon DEVE ser um recurso nativo. Use "ic_launcher" (padrão) ou um ic_stat_* gerado no Android Studio.
  * - sound só funciona se o arquivo existir em android/app/src/main/res/raw/beep.wav (ou outro nome).
- * - Para Web Notifications, ícones via URL funcionam; no Android nativo NÃO.
+ * - Em Web Notifications, ícones via URL funcionam; no Android nativo NÃO.
  */
 
 export function MobileNotifications() {
@@ -42,7 +42,7 @@ export function MobileNotifications() {
       setIsSupported(native || webSupported);
 
       if (native) {
-        // 1) Checa/solicita permissão
+        // 1) Checa permissão
         const p = await LocalNotifications.checkPermissions();
         const mapped = (p.display as NotificationPermission) ?? "default";
         setPermission(mapped);
@@ -103,8 +103,7 @@ export function MobileNotifications() {
               channelId: CHANNEL_ID,
               smallIcon: "ic_launcher", // ícone nativo
               // sound: settings.sound ? "beep.wav" : undefined, // use apenas se raw/beep.wav existir
-              // Em Android 13+ vibração depende do canal/perm.; a API aceita array:
-              // vibrate: settings.vibration ? [200, 100, 200] : undefined,
+              // vibrate: settings.vibration ? [200, 100, 200] : undefined, // opcional
               extra: { type: "test" },
             },
           ],
@@ -270,7 +269,7 @@ export function MobileNotifications() {
         </CardContent>
       </Card>
 
-      {/* Guia de instalação (aparece mais para uso via navegador/PWA) */}
+      {/* Guia de instalação (PWA) */}
       <Card className="dark:bg-gray-800 dark:border-gray-700">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 dark:text-white text-lg">

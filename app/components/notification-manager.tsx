@@ -60,7 +60,7 @@ export function NotificationManager() {
             title: "Adiar 10min",
           },
         ],
-      })
+      } as any)
     }
   }
 

@@ -1,0 +1,17 @@
+{
+  "platforms": {
+    "android": {
+      "icon": {
+        "source": "public/icon-512x512.png",
+        "padding": 0.0,
+        "backgroundColor": "#FFFFFF"
+      },
+      "splash": {
+        "source": "public/icon-512x512.png",
+        "backgroundColor": "#3b82f6",
+        "darkSource": "public/icon-512x512.png",
+        "darkBackgroundColor": "#0b1220"
+      }
+    }
+  }
+}
